@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+
+:root {
+  --primary-color: #0a0d14;
+  --primary-color-light: #20242f;
+  --secondary-color: #f49e09;
+  --extra-light: rgba(255, 255, 255, 0.5);
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Lisu Bosa", serif;
+}
+/*  */
+
+
+
+.header__container {
+    padding: 12rem 1rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+  }
+  
+  .header__container h1 {
+    margin-bottom: 1rem;
+    max-width: 700px;
+    font-size: 4rem;
+    font-family: var(--header-font);
+  }
+  
+  .header__container h4 {
+    position: relative;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .header__container h4::after {
+    position: absolute;
+    content: "";
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 2rem;
+    background-color: var(--white);
+  }
+  
+  .about__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+.about__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .about__container :is(.section__header, .section__subheader) {
+    text-align: left;
+  }
+  
+  .about__flex {
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: var(--primary-color-light);
+  }
+  
+  .about__card {
+    flex: 1 1 150px;
+    text-align: center;
+    border-right: 2px solid var(--primary-color);
+  }
+  
+  .about__card:last-child {
+    border: none;
+  }
+  
+  .about__card h4 {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+  }
+  
+  .about__card p {
+    font-size: 0.9rem;
+    line-height: .2;
+  }
+  
+  .about__image img {
+    max-width: 450px;
+    margin: auto;
+  }
+
+  /* Add animation to reveal the about__content */
+.about__content {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

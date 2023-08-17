@@ -65,7 +65,8 @@ body {
   background-color: var(--primary-color);
 }
 
-header {
+.header {
+  height: 90vh;
   background-image: linear-gradient(to top, var(--primary-color), transparent),
     url("https://cdn.leonardo.ai/users/cc91876d-418b-4856-82a3-b277d5cda999/generations/3e0dd32b-4366-4200-ad3a-169e98bfb92b/DreamShaper_v7_travel_the_world_destination_to_ventue_where_no_0.jpg");
   background-position: center center;
@@ -76,19 +77,25 @@ header {
 
 
 nav{
-  background-color: #ffff;
+  /* background-color: #ffff; */
   /* background-color: rgba(0, 0, 0, 0.5); */
   border: 1px solid var(--extra-light);
+  /* border: 3px solid red; */
 }
 
+/* percentage = (1200 / total_width) * 100 */
+/* percentage = (1200 / 1920) * 100 ≈ 62.5%
+ */
 .Nav__Bar{
-  max-width: var(--max-width);  /* 1200px */
+  max-width: var(--max-width);  
+  /* max-width: 62.5%; */
   margin: auto;
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  /* border: 3px solid red; */
 }
 
 .Nav__Logo .Logo{
@@ -106,7 +113,7 @@ ul{
 li .links{
   padding: 1.5rem;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -117,6 +124,6 @@ li .links:hover{
 
 .search span{
   padding: 1rem 0;
-  color: #000;
+  color: #fff;
   cursor: pointer;
 }
